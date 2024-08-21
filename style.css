@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+    --lavender: #E6E6FA;
+    --dark-gray: #333;
+    --violet: rgba(95, 4, 168, 1);
+    --pink-shadow: rgba(255, 20, 147, 0.5);
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--lavender);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    color: var(--text-color);
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.user-form {
+    width: 100%;
+    max-width: 700px;
+}
+
+.user-form input {
+    width: 100%;
+    display: block;
+    background: var(--lavender);
+    border: none;
+    border-radius: 10px;
+    color: var(--text-color);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px var(--pink-shadow),
+        0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user-form input::placeholder {
+    color: #bbb;
+}
+
+.user-form input:focus {
+    outline: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+}
+
+#main-content {
+    margin-top: 3rem;
+}
+
+.card {
+    max-width: 800px;
+    background: var(--lavender);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px var(--pink-shadow),
+        0 15px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 3rem;
+    margin: 0 1.5rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 10px solid var(--dark-gray);
+    height: 150px;
+    width: 150px;
+}
+
+.user-info {
+    color: var(--text-color);
+    margin-left: 2rem;
+}
+
+.user-info h2 {
+    margin-top: 0;
+}
+
+.user-info ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 400px;
+}
+
+.user-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.repo {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--dark-gray);
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+@media (max-width: 500px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-form {
+        max-width: 400px;
+    }
+}
